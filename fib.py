@@ -4,12 +4,7 @@ cache = {}
 
 
 def fibonacci_recursive(n: int) -> int:
-    """
-    Computes the n-th Fibonacci number.
-    :param n: n-th Fibonacci number.
-    :return: The n-th Fibonacci number.
-    """
-    # TODO: Implement!
+
 
     if n < 0:
         raise ValueError("n must be greater than or equal to 0.")
@@ -26,10 +21,9 @@ def fibonacci_recursive(n: int) -> int:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-
     parser.add_argument('nth', type=int, help="Nth Fibonacci number.")
-
     args = parser.parse_args()
+
     nth = fibonacci_iterative(args.nth)
     print(nth)
 
